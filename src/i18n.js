@@ -24,7 +24,11 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng:"kg",
+    detection: {
+      // сначала ищет язык в localStorage, потом в cookie, потом по браузеру
+      order: ['localStorage', 'cookie', 'navigator'],
+      caches: ['localStorage', 'cookie'], // где сохранять язык
+    },
     fallbackLng: "ru",
     debug: true,
   });

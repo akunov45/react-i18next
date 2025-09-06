@@ -23,6 +23,7 @@ const App = () => {
       </select>
 
       <h3>{t("Welcome")}</h3>
+      <p>{t("Look at similar ones")}</p>
     </div>
   )
 }
